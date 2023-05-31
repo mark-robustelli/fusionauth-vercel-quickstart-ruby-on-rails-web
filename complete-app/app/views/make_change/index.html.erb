@@ -1,0 +1,16 @@
+<h1>We Make Change</h1>
+  <% if params.has_key?(:amount) %>
+  <p>We can make change for
+    <%= params[:amount] %>
+  with
+  <%= @nickels %> nickels and
+  <%= @pennies %> pennies!
+    <% end %>
+</p>
+<%= form_with url: "/make_change", method: :get do |form| %>
+  <%= form.label :amount, "Amount:" %>
+  <%= form.text_field :amount %>
+  <%= form.submit "Make Change" %>
+<% end %>
+
+
