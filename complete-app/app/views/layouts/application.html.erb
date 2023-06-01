@@ -22,14 +22,18 @@
             <button type='submit' class='button-lg'>Login</button>
           <% end %>
         <% else %>
+          <%= session[:user]["email"] %>
+          &nbsp;
           <%= button_to "Logout", '/logout', method:'get', class:'button-lg' %>
         <% end %>
       </div>
 
       <div id="menu-bar" class="menu-bar">
-        <a href="/" class="menu-link">Home</a>
         <% if session[:user] %>
+          <a href="/" class="menu-link">Account</a>
           <a href="/make_change" class="menu-link">Make Change</a>
+        <% else %>
+          <a href="/" class="menu-link">Home</a>
         <% end %>
       </div>
     </div>
@@ -41,9 +45,11 @@
           <%= yield %>
 
         </div>
-        <div style="flex: 0;">
-          <%= image_tag "money.jpg", style:"max-width: 800px;"%>
-        </div>
+        <% if !session[:user] %>
+          <div style="flex: 0;">
+            <%= image_tag "money.jpg", style:"max-width: 800px;"%>
+          </div>
+        <% end %>
       </div>
     </div>
 

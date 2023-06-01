@@ -5,8 +5,8 @@ This repository contains a Ruby on Rails app that works with a locally running i
 ## Setup
 
 ### Prerequisites
-- [Ruby](https://classic.yarnpkg.com/lang/en/): This will be needed for pulling down the various dependencies.
-- [Rails](https://nodejs.org/en/): This will be used in order to run the node server.
+- [Ruby](https://www.ruby-lang.org/en/documentation/installation/): This will be needed for pulling down the various dependencies.
+- [Rails](https://guides.rubyonrails.org/getting_started.html): This will be used in order to run the Rails server.
 - [Docker](https://www.docker.com): The quickest way to stand up FusionAuth.
   - (Alternatively, you can [Install FusionAuth Manually](https://fusionauth.io/docs/v1/tech/installation-guide/)).
 
@@ -17,10 +17,10 @@ This app has been tested with Ruby 3.2.2 and Rails 7.0.4.3
 The root of this project directory (next to this README) are two files [a Docker compose file](./docker-compose.yml) and an [environment variables configuration file](./.env). Assuming you have Docker installed on your machine, you can stand up FusionAuth up on your machine with:
 
 ```
-docker-compose up
+docker-compose up -d
 ```
 
-The FusionAuth configuration files also make use of a unique feature of FusionAuth, called Kickstart: when FusionAuth comes up for the first time, it will look at the [Kickstart file](./kickstart/kickstart.json) and mimic API calls to configure FusionAuth for use when it is first run. 
+The FusionAuth configuration files also make use of a unique feature of FusionAuth, called [Kickstart](https://fusionauth.io/docs/v1/tech/installation-guide/kickstart): when FusionAuth comes up for the first time, it will look at the [Kickstart file](./kickstart/kickstart.json) and mimic API calls to configure FusionAuth for use when it is first run. 
 
 > **NOTE**: If you ever want to reset the FusionAuth system, delete the volumes created by docker-compose by executing `docker-compose down -v`. 
 
@@ -70,8 +70,3 @@ invalid_client :: Invalid client authentication credentials.
 ```
 
 This indicates that Omniauth is unable to call FusionAuth to validate the returned token.  It is likely caused my not supplying the correct *client secret*.  Ensure the `OP_SECRET_KEY` used to start rails matches the FusionAuth ExampleApp client secret.  http://localhost:9011/admin/application/
-
-
-
-
-
