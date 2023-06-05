@@ -7,5 +7,4 @@ class MakeChangeController < ApplicationController
       @pennies = ((amount - 0.05*@nickels) / 0.01).to_i
     end
   end
-
 end
