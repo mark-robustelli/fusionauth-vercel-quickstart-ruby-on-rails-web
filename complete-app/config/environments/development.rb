@@ -1,9 +1,11 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+#tag::oidcConfig[]
   # fusionauth oidc configuration.  In production, change issuer to FusionAuth production url
   config.x.fusionauth.issuer = "http://localhost:9011"
   config.x.fusionauth.client_id = "e9fdb985-9173-4e01-9d73-ac2d60d1dc8e"
+#end::oidcConfig[]
 
   # Settings specified here will take precedence over those in config/application.rb.
 
