@@ -50,7 +50,7 @@ You can login with a user preconfigured during Kickstart, `richard@example.com` 
 
 ### Further Information
 
-Visit https://fusionauth.io/docs/v1/tech/tutorials/integrate-ruby-rails for a step by step guide on how to build this Rails app integrated with FusionAuth by scratch.
+Visit https://fusionauth.io/quickstarts/quickstart-ruby-rails-web for a step by step guide on how to build this Rails app integrated with FusionAuth by scratch.
 
 ### Troubleshooting
 

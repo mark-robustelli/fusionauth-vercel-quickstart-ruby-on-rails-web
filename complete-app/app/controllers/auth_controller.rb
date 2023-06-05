@@ -13,4 +13,3 @@ class AuthController < ApplicationController
     redirect_to '/'
   end
 end
-

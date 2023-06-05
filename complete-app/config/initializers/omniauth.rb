@@ -1,4 +1,3 @@
-
 # only if you want a link instead of a button for login
 #OmniAuth.config.allowed_request_methods = [:post, :get]
 
