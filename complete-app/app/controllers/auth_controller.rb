@@ -8,7 +8,6 @@ class AuthController < ApplicationController
   end
 
   def callback
-    #puts request.env['omniauth.auth'].info.inspect
     session[:user] = request.env['omniauth.auth'].info
     redirect_to '/'
   end
