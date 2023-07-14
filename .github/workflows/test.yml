@@ -30,7 +30,7 @@ jobs:
       # Setup the system with the repository code and Ruby
       - uses: actions/checkout@v3
       - uses: ruby/setup-ruby@v1
-        working-directory: complete-app
         with:
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           ruby-version: '3.2.2'
+          working-directory: complete-app
