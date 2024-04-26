@@ -51,7 +51,10 @@
             ],
             "debug": false,
             "enabled": true,
-            "preflightMaxAgeInSeconds": 0
+            "preflightMaxAgeInSeconds": 0,
+            "allowedHeaders": [
+              "x-turbo-request-id"
+            ]
           }
         }
       }

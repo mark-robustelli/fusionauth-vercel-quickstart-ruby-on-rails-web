@@ -4,7 +4,7 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :openid_connect,
   name: :fusionauth,
-  scope: [:openid],
+  scope: [:openid, :email, :profile],
   response_type: :code,
   issuer: Rails.configuration.x.fusionauth.issuer,
   ssl: false,
