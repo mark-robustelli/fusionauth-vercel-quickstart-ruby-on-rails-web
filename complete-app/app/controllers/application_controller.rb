@@ -11,5 +11,6 @@ class ApplicationController < ActionController::Base
     # Ensure we're on the same hostname/url registered as the callback URL in FA
     redirect_to('http://localhost:3000', allow_other_host: true) unless request.host == "localhost"
    end
+   
 end
 
